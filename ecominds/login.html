@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #076707, #7aff7a);
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            background: linear-gradient(to top, #00d60b, #fafffa);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000000;
+            font-size: 18px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 18px;
+        }
+
+        .btn-access, .btn-google {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .btn-access {
+            background-color: #005b1a;
+            color: rgb(255, 255, 255);
+        }
+
+        .btn-access:hover {
+            background-color: #3a824e;
+        }
+
+        .btn-google {
+            background-color: #fffbfb;
+            color: rgb(0, 0, 0);
+        }
+
+        .btn-google:hover {
+            background-color: #efeded;
+        }
+
+        .btn-google img {
+            margin-right: 10px;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: #050607;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" id="logo-img">
+        </div>
+        <h1>Acessar</h1>
+        <form action="/login" method="post" id="login-form">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+            </div>
+            <button type="button" id="btn-access" class="btn-access">Acessar</button>
+            <button type="button" class="btn-google">
+                <img src="img/google.png" alt="Google Logo" width="20" height="20">
+                Entrar com o Google
+            </button>
+        </form>
+        <div class="links">
+            <a href="#">Esqueceu a senha?</a>
+            <a href="/cadastro.html">Cadastre-se</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('btn-access').addEventListener('click', function() {
+            window.location.href = 'inicial.html';
+        });
+    </script>
+</body>
+</html>

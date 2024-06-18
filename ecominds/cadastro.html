@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #076707, #7aff7a);
+            font-family: Arial, sans-serif;
+        }
+
+        .register-container {
+            background: linear-gradient(to top, #00d60b, #ffffff);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .register-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000000;
+            font-size: 18px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 18px;
+        }
+
+        .btn-register {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #005b1a;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-register:hover {
+            background-color: #47b967;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: #000000;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" id="logo-img">
+        </div>
+        <h1>Novo Usuário</h1>
+        <form action="/register" method="post">
+            <div class="input-group">
+                <label for="Usuario">Usuário:</label>
+                <input type="text" id="Usuario" name="Usuario" placeholder="Digite seu nome de usuário" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+            <a href="/login.html" class="btn-register">Cadastrar</a>
+        </form>
+        <div class="links">
+            <a href="/login.html">Já possui uma conta? Entre</a>
+        </div>
+    </div>
+</body>
+</html>

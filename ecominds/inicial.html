@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Ambiental</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #175003;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            position: relative;
+        }
+        .menu-toggle {
+            display: none;
+        }
+        .menu-toggle-label {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #005b1a;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .menu-toggle-label:hover {
+            background-color: #47b967;
+        }
+        .menu {
+            display: none; 
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .menu-toggle-label:hover {
+          background-color: #47b967;
+        }
+
+        .menu-toggle:checked + .menu-toggle-label + .menu {
+            display: block; 
+        }
+        .menu a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            display: block;
+            padding: 8px;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+        .menu h3 {
+           text-align: center;
+        }
+        .blog-container {
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .blog-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #005b1a;
+        }
+
+        .topic {
+            background: #f9f9f9;
+            padding: 55px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px; 
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .topic:hover {
+            transform: scale(1.05);
+        }
+
+        .topic a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 34px;
+            display: block;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .reciclagem {
+            background: url('img/Reciclagem.png') no-repeat center center/cover;
+        }
+
+        .mudancas-climaticas {
+            background: url('img/Mudanças-Climaticas.png') no-repeat center center/cover;
+        }
+
+        .biodiversidade {
+            background: url('img/Biodiversidade.png') no-repeat center center/cover;
+        }
+
+        .poluicao-ambiental {
+            background: url('img/Poluição-Ambiental.png') no-repeat center center/cover;
+        }
+
+        .artigos {
+            background: url('img/Artigos.png') no-repeat center center/cover;
+        }
+        .logo {
+            position: absolute;
+            top: 5px;
+            right: 30px;
+            width: 135px; 
+        }
+    </style>
+</head>
+<header>
+    <img src="logo.png" alt="Logotipo" class="logo">
+</header>
+<body>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-toggle-label">&#9776; Menu</label>
+  <div class="menu">
+      <a href="#">Página Inicial</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="#">Conquistas</a><br><br>
+
+      <h3>TEMAS</h3><br>
+   
+      <a href="reciclagem.html">Reciclagem</a>
+      <a href="mudancas.html">Mudanças Climáticas</a>
+      <a href="#">Biodiversidade</a>
+      <a href="#">Poluição Ambiental</a>
+      <a href="artigos.html">Artigos</a><br><br><br><br>
+
+      <a href="#">Contatos</a>
+      <a href="login.html">Logout</a>
+
+
+  </div>
+    <div class="blog-container">
+        <div class="topic reciclagem">
+            <a href="reciclagem.html">Reciclagem</a>
+        </div>
+        <div class="topic mudancas-climaticas">
+            <a href="mudancas.html">Mudanças Climáticas</a>
+        </div>
+        <div class="topic biodiversidade">
+            <a href="biodiversidade.html">Biodiversidade</a>
+        </div>
+        <div class="topic poluicao-ambiental">
+            <a href="poluicao-ambiental.html">Poluição Ambiental</a>
+        </div>
+        <div class="topic artigos">
+            <a href="artigos.html">Artigos</a>
+        </div>
+    </div>
+</body>
+</html>
